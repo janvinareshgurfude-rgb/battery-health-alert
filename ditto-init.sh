@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-DITTO_BASE="${DITTO_BASE:-http://localhost:8080}"
+DITTO_BASE="${DITTO_BASE:-http://localhost:8082}"
 DITTO_USER="${DITTO_USER:-ditto}"
 DITTO_PASS="${DITTO_PASS:-ditto}"
 THING_ID="${DITTO_THING_ID:-hag:vehicle-01}"

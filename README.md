@@ -27,7 +27,7 @@ See architecture-diagram.svg and sequence-diagram.svg for the full as-implemente
 - Docker Desktop (Windows/Mac) or Docker Engine + Compose (Linux)
 - Python 3.11 (only if running services outside Docker for local debugging)
 - kuksa-client Python package
-- Eclipse eCAL Python bindings (built per the eCAL documentation)
+- pyzmq (used as the real pub/sub middleware layer inside the pipeline service -- see note in src/kuksa_ecal_ditto_pipeline.py on why eCAL's Python bindings were swapped for ZeroMQ)
 - curl (for the Ditto init script)
 
 ## Setup on Windows
@@ -37,12 +37,29 @@ See architecture-diagram.svg and sequence-diagram.svg for the full as-implemente
 3. Do everything below inside your Ubuntu (WSL) terminal.
 4. This project avoids network_mode: host so it works the same on Windows, Mac, and Linux.
 
+## Prerequisite: Eclipse Ditto
+
+This repo's docker-compose.yml only starts Kuksa and this project's own three
+pipeline/monitor services. Ditto (with its MongoDB backend) runs as a
+**separate stack** using Eclipse Ditto's official multi-service Docker
+deployment, exposed on **port 8082** on the host.
+
+1. Clone Ditto's deployment repo and start it separately, e.g.:
+   git clone https://github.com/eclipse-ditto/ditto.git
+   cd ditto/deployment/docker
+   docker compose up -d
+2. Confirm Ditto is reachable on the host before continuing:
+   curl -u ditto:ditto http://localhost:8082/api/2/things
+   (An empty list `[]` or a 200/401 response means Ditto is up. Adjust the
+   port here and in docker-compose.yml / ditto-init.sh together if your
+   Ditto stack publishes on a different host port.)
+
 ## Installation
 
-docker compose up -d kuksa-databroker mongodb ditto
+docker compose up -d kuksa-databroker
 chmod +x ditto-init.sh
-./ditto-init.sh
-curl -u ditto:ditto http://localhost:8080/api/2/things/hag:vehicle-01
+DITTO_BASE=http://localhost:8082 ./ditto-init.sh
+curl -u ditto:ditto http://localhost:8082/api/2/things/hag:vehicle-01
 
 ## Running the Pipeline
 
@@ -62,8 +79,9 @@ Expected behavior:
 ## Reproducing the Demonstrated Behavior
 
 docker compose down
-docker compose up -d kuksa-databroker mongodb ditto
-./ditto-init.sh
+(ensure the separate Ditto stack from the Prerequisite step above is running)
+docker compose up -d kuksa-databroker
+DITTO_BASE=http://localhost:8082 ./ditto-init.sh
 docker compose up -d kuksa-ecal-ditto-pipeline alert-monitor
 docker compose up sensor-simulator
 
@@ -73,7 +91,7 @@ Set SCENARIO=steady as an environment variable on sensor-simulator to run a flat
 
 What changed: a hysteresis band was added to the batteryAlert rule. The alert sets at SoC < 15% and only clears once SoC rises above 18%.
 
-Where it lives: src/kuksa_ecal_ditto_pipeline.py, in on_ecal_message(). The pipeline service holds the current alert state in memory and only flips it at the two thresholds.
+Where it lives: src/kuksa_ecal_ditto_pipeline.py, in subscriber_loop(). The pipeline service holds the current alert state in memory and only flips it at the two thresholds.
 
 Effect on pipeline behavior: without this change, a SoC value oscillating near 15% would cause batteryAlert to flap true/false on every reading near the boundary. With hysteresis, each logged transition reflects a real state change, not sensor jitter.
 
