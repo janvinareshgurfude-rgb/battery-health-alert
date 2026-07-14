@@ -1,0 +1,61 @@
+kuksa-ecal-ditto-pipeline  | [pipeline] subscribed to Vehicle.Powertrain.TractionBattery.StateOfCharge.Current; bridging via pub/sub
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 40.0, "ts": 1783994305.5348861}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=40.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 39.0, "ts": 1783994307.539044}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=39.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 38.0, "ts": 1783994309.5853126}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=38.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 37.0, "ts": 1783994311.5909908}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=37.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 36.0, "ts": 1783994313.597618}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=36.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 35.0, "ts": 1783994315.6113172}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=35.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 34.0, "ts": 1783994317.6158073}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=34.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 33.0, "ts": 1783994319.6208723}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=33.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 32.0, "ts": 1783994321.6330438}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=32.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 31.0, "ts": 1783994323.637659}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=31.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 30.0, "ts": 1783994325.6427336}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=30.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 29.0, "ts": 1783994327.644866}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=29.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 28.0, "ts": 1783994329.6497338}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=28.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 27.0, "ts": 1783994331.6576192}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=27.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 26.0, "ts": 1783994334.0301726}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=26.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 25.0, "ts": 1783994336.0350866}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=25.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 24.0, "ts": 1783994338.0393999}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=24.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 23.0, "ts": 1783994340.0435407}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=23.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 22.0, "ts": 1783994342.050883}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=22.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 21.0, "ts": 1783994344.0719588}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=21.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 20.0, "ts": 1783994346.0792632}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=20.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 19.0, "ts": 1783994348.084981}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=19.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 18.0, "ts": 1783994350.0995154}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=18.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 17.0, "ts": 1783994352.108928}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=17.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 16.0, "ts": 1783994354.1158202}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=16.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 15.0, "ts": 1783994356.1217725}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=15.0, batteryAlert=False
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 14.0, "ts": 1783994358.1238348}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=14.0, batteryAlert=True
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 13.0, "ts": 1783994360.1292126}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=13.0, batteryAlert=True
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 12.0, "ts": 1783994362.1448405}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=12.0, batteryAlert=True
+kuksa-ecal-ditto-pipeline  | [pipeline] Kuksa -> pubsub: {"path": "Vehicle.Powertrain.TractionBattery.StateOfCharge.Current", "soc": 11.0, "ts": 1783994364.162205}
+kuksa-ecal-ditto-pipeline  | [pipeline] PUT http://host.docker.internal:8082/api/2/things/hag:vehicle-01/features/battery -> 204, soc=11.0, batteryAlert=True

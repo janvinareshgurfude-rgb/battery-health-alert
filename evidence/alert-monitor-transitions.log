@@ -1,0 +1,3 @@
+alert-monitor  | [alert-monitor] 2026-07-14T01:50:11.430773 SoC=100%  batteryAlert transitioned -> False
+alert-monitor  | [alert-monitor] 2026-07-14T01:59:20.063588 SoC=14.0%  batteryAlert transitioned -> True
+alert-monitor  | [alert-monitor] 2026-07-14T01:59:55.029669 SoC=19.0%  batteryAlert transitioned -> False

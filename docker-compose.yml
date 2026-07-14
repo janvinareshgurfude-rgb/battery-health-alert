@@ -1,0 +1,51 @@
+version: "3.8"
+
+# Battery Health Alert -- Iteration 1 baseline pipeline
+# Sensor Simulator -> Kuksa -> [Kuksa+eCAL+Ditto pipeline service] -> Ditto -> Alert-Monitor
+#
+# Ditto itself runs as a SEPARATE stack (the official multi-service Ditto
+# deployment, in ~/projects/ditto-official/deployment/docker), reachable
+# from these containers at host.docker.internal:8082. This project only
+# starts Kuksa and our own three pipeline/monitor services.
+
+services:
+  kuksa-databroker:
+    image: ghcr.io/eclipse/kuksa.val/databroker:latest
+    container_name: kuksa-databroker
+    ports:
+      - "55555:55555"
+    command: ["--insecure"]
+
+  sensor-simulator:
+    build: ./src
+    container_name: sensor-simulator
+    command: ["python3", "sensor_simulator.py"]
+    depends_on:
+      - kuksa-databroker
+    environment:
+      - KUKSA_HOST=kuksa-databroker
+      - KUKSA_PORT=55555
+
+  kuksa-ecal-ditto-pipeline:
+    build: ./src
+    container_name: kuksa-ecal-ditto-pipeline
+    command: ["python3", "kuksa_ecal_ditto_pipeline.py"]
+    depends_on:
+      - kuksa-databroker
+    environment:
+      - KUKSA_HOST=kuksa-databroker
+      - KUKSA_PORT=55555
+      - DITTO_BASE=http://host.docker.internal:8082
+      - DITTO_THING_ID=hag:vehicle-01
+      - DITTO_USER=ditto
+      - DITTO_PASS=ditto
+
+  alert-monitor:
+    build: ./src
+    container_name: alert-monitor
+    command: ["python3", "alert_monitor.py"]
+    environment:
+      - DITTO_BASE=http://host.docker.internal:8082
+      - DITTO_THING_ID=hag:vehicle-01
+      - DITTO_USER=ditto
+      - DITTO_PASS=ditto
